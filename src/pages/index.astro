@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LoginForm from '../components/LoginForm.astro';
+import "../styles/global.css"; 
+---
+
+<Layout title="Login | Cloud Academy">
+  <LoginForm />
+</Layout>
+
+<script>
+
+  if (localStorage.getItem('usuario_logueado')) {
+    window.location.href = '/dashboard';
+  }
+</script>
